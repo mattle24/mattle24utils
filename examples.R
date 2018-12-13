@@ -16,7 +16,6 @@ ggplot(mtcars, aes(x = gear, y = wt)) +
   theme_mattle24()
 
 
-
 # Scatterplot -------------------------------------------------------------
 
 ggplot(mtcars, aes(x = wt, y = mpg)) +
