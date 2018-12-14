@@ -14,15 +14,3 @@ ggplot(mtcars, aes(x = gear, y = wt)) +
   ) +
   facet_wrap(~am) +
   theme_mattle24()
-
-
-# Scatterplot -------------------------------------------------------------
-
-ggplot(mtcars, aes(x = wt, y = mpg)) +
-  geom_point() +
-  labs(
-    title = 'How does weight affect MPG?'
-    ,x = 'Weight'
-    ,y = 'MPG'
-  ) +
-  theme_mattle24()
