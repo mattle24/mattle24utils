@@ -14,4 +14,3 @@ ggplot(mtcars, aes(x = gear, y = wt)) +
   ) +
   facet_wrap(~am) +
   theme_mattle24()
-
