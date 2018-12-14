@@ -1,7 +1,7 @@
 Package: mattle24utils
 Type: Package
 Title: Utility Features (Mattle24)
-Version: 0.0.1.9005
+Version: 0.0.1.9006
 Author: person(first = 'Matt', last = 'Lehman', email = 'mhl84@cornell.edu', role = 'aut')
 Description: This is a package with utility functions I commonly use. 
 License: GNU
