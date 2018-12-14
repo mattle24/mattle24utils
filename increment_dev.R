@@ -1,4 +1,4 @@
-.libPaths(c("C:/Users/Matt_2/Documents/R/win-library/3.5", "C:/Program Files/R/R-3.5.0/library"))
+# might have to set .libPaths() here, I do it in .git/hooks/pre-push
 library(usethis)
 
 use_version(which = 'dev')
