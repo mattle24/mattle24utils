@@ -1,16 +1,10 @@
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
-
-# TODO: add  documentation
+# Plotting functions
 
 #' Mattle24 Theme
 #'
 #' This is a custom ggplot2 theme developed by @mattle24.
 #'
-#' @param ... Passes on adiditional arguments to theme()
+#' @param ... Passes on additional arguments to theme()
 #' @export
 theme_mattle24 <- function (...) {
   requireNamespace('ggplot2', quietly = FALSE)
@@ -46,7 +40,6 @@ quick_colors <- list(
 quick_color <- function(color) {
   return(quick_colors[[color]])
 }
-
 
 #' Reorder Within Clean Labeller
 #'

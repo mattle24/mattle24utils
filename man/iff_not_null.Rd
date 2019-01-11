@@ -18,12 +18,10 @@ else returns the second arguement. Comes from Hadley's
 Advanced R: https://adv-r.hadley.nz.
 }
 \examples{
-\dontrun {
 x <- NULL
 x \%||\% 'default'
 
 x <- 'option1'
 x \%||\% 'default'
-}
 
 }

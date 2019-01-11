@@ -11,13 +11,11 @@
 #' @param arg2 the second argument.
 #'
 #' @examples
-#' \dontrun {
 #' x <- NULL
 #' x %||% 'default'
 #'
 #' x <- 'option1'
 #' x %||% 'default'
-#' }
 #'
 #' @rdname iff_not_null
 #'

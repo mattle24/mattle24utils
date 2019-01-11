@@ -7,7 +7,7 @@
 theme_mattle24(...)
 }
 \arguments{
-\item{...}{Passes on adiditional arguments to theme()}
+\item{...}{Passes on additional arguments to theme()}
 }
 \description{
 This is a custom ggplot2 theme developed by @mattle24.
