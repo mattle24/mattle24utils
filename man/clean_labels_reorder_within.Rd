@@ -19,3 +19,6 @@ It removes the text that drlib::reorder_within() so
 that the axis is correctly ordered but the labels are
 clean.
 }
+\seealso{
+drlib::reorder_within()
+}

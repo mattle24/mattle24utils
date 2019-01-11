@@ -8,7 +8,7 @@
 
 #' Mattle24 Theme
 #'
-#' This is my custom ggplot2 theme.
+#' This is a custom ggplot2 theme developed by @mattle24.
 #'
 #' @param ... Passes on adiditional arguments to theme()
 #' @export
@@ -60,6 +60,7 @@ quick_color <- function(color) {
 #' @param sep The seperator to split the labels on. Can only appear once in
 #' each label. Default is "-_-".
 #'
+#' @seealso drlib::reorder_within()
 #' @export
 clean_labels_reorder_within <- function(labels, sep = "-_-") {
   requireNamespace('purrr', quietly = FALSE)

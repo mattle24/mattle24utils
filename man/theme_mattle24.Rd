@@ -10,5 +10,5 @@ theme_mattle24(...)
 \item{...}{Passes on adiditional arguments to theme()}
 }
 \description{
-This is my custom ggplot2 theme.
+This is a custom ggplot2 theme developed by @mattle24.
 }
