@@ -24,5 +24,5 @@
   if (!is.null(arg1))
     arg1
   else
-    arh2
+    arg2
 }
