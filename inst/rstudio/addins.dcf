@@ -1,0 +1,5 @@
+Name: Insert Docstring
+Description: Inserts a skeleton docstring for a function above the current line if in a document
+  or in the console if used in the console.
+Binding: insert_docstring
+Interactive: false
