@@ -11,6 +11,7 @@ function_docstring <- glue::glue(
   {special} @param
   {special}
   {special} @export
+  \n
   "
 , special = "#'")
 
@@ -25,5 +26,5 @@ current_row <- function() {
 #'
 #' @export
 insert_docstring <- function() {
-  rstudioapi::insertText(c(current_row(), 1), paste0(function_docstring, "\n"))
+  rstudioapi::insertText(c(current_row(), 1), function_docstring)
 }
