@@ -2,11 +2,14 @@
 % Please edit documentation in R/addins.R
 \name{insert_docstring}
 \alias{insert_docstring}
-\title{Insert Skeleton Docstring}
+\title{Insert Skeleton roxygen2 documentation}
 \usage{
 insert_docstring()
 }
 \description{
-Inserts a skeleton docstring for a function at the current line if in a
-document or in the console if used in the console.
+Inserts skeleton Roxygen2 documentation for a function at the current line if
+in a document or in the console if used in the console.
+}
+\seealso{
+\code{\link[docthis]{doc_this}}
 }
