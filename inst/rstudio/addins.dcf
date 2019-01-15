@@ -1,0 +1,10 @@
+Name: Insert Docstring
+Description: Inserts a skeleton docstring for a function above the current line if in a document
+  or in the console if used in the console.
+Binding: insert_docstring
+Interactive: false
+
+Name: New RMarkdown
+Description: Create a new RMarkdown document with a custom template.
+Binding: new_rmarkdown
+Interactive: true
