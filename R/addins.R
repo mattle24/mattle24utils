@@ -43,3 +43,44 @@ insert_docstring <- function() {
 }
 
 
+rmarkdown_template_main <- function(title = "", author = "") {
+  return(glue::glue(
+  '
+  ---
+  title: "{title}"
+  author: "{author}"
+  date: "`r format(Sys.time(), \'%b %d, %Y\')`"
+  output:
+    html_document:
+      fig_height: 4
+      theme: yeti
+      highlight: pygments
+      toc: true
+      toc_depth: 3
+      toc_float: true
+  ---
+  '))
+}
+
+#' New RMarkdown
+#'
+#' Make a new Rmarkdown document with default settings. Users will be prompted
+#' to provide a title and an author if they are not given in the arguments.
+#'
+#' @param title optional. The title of the new document.
+#'
+#' @param author optional. The author of the new document.
+#'
+#' @export
+new_rmarkdown <- function(title, author) {
+  if (missing(title))
+    title <- rstudioapi::showPrompt('Title', 'Title of the new document',
+                                    default = 'Title')
+
+  if (missing(author))
+    author <- rstudioapi::showPrompt('Author', 'Author of the new document',
+                                     default = 'Author')
+
+  rstudioapi::documentNew(text = rmarkdown_template_main(title, author),
+                          type = 'rmarkdown')
+}
