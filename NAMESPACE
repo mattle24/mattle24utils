@@ -2,6 +2,7 @@
 
 export(clean_labels_reorder_within)
 export(insert_docstring)
+export(insert_future_assign)
 export(new_rmarkdown)
 export(quick_color)
 export(theme_mattle24)

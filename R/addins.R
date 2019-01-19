@@ -15,7 +15,7 @@ function_docstring <- glue::glue(
   {special} @export
   \n
   "
-, special = "#'")
+  , special = "#'")
 
 current_row <- function() {
   rstudioapi::getActiveDocumentContext()$selection[[1]][[1]][[1]][1]
@@ -45,7 +45,7 @@ insert_docstring <- function() {
 
 rmarkdown_template_main <- function(title = "", author = "") {
   return(glue::glue(
-  '
+    '
   ---
   title: "{title}"
   author: "{author}"
@@ -83,4 +83,15 @@ new_rmarkdown <- function(title, author) {
 
   rstudioapi::documentNew(text = rmarkdown_template_main(title, author),
                           type = 'rmarkdown')
+}
+
+
+#' Insert future assign
+#'
+#' Insert an "%<-%" future assign at the cursor.
+#'
+#' @export
+insert_future_assign <- function() {
+  cursor_position <- rstudioapi::getActiveDocumentContext()$selection[[1]][[1]][[1]]
+  rstudioapi::insertText(cursor_position, "%<-%")
 }

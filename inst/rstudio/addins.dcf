@@ -4,6 +4,11 @@ Description: Inserts a skeleton docstring for a function above the current line 
 Binding: insert_docstring
 Interactive: false
 
+Name: Insert Future Assign
+Description: Insert an %<-% future assign at the cursor.
+Binding: insert_future_assign
+Interactive: false
+
 Name: New RMarkdown
 Description: Create a new RMarkdown document with a custom template.
 Binding: new_rmarkdown
