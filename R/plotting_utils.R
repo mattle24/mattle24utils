@@ -8,6 +8,8 @@
 #' @export
 theme_mattle24 <- function (...) {
   requireNamespace('ggplot2', quietly = FALSE)
+  tryCatch(extrafont::loadfonts(quiet = TRUE))
+
   theme_bw() +
   theme(
     panel.background = element_rect(fill = 'white')
