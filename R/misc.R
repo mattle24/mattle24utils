@@ -17,7 +17,7 @@
 #' data$x2 <- sample(c(NA_real_, 1:4), 40, replace= TRUE)
 #' drop_na_verbose(data) # filter any NA column
 #' drop_na_verbose(data, x1) # filter when x1 is NA
-#' drop_na_verbose(data, -x2) # filter when any column, except x2, is NA
+#' drop_na_verbose(data, -x2) # filter when any column, not including x2, is NA
 #' }
 #'
 #' @export
