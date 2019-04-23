@@ -2,8 +2,8 @@
 
 export(clean_labels_reorder_within)
 export(drop_na_verbose)
+export(filter_verbose)
 export(insert_docstring)
 export(insert_future_assign)
 export(new_rmarkdown)
-export(quick_color)
 export(theme_mattle24)

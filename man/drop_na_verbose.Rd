@@ -16,7 +16,7 @@ documentation.}
 }
 \description{
 A wraper of \code{\link{tidyr::drop_na()}} to drop NA values and give a
-warning for how many values were dropped.
+warning for how many rows were dropped.
 }
 \examples{
 \dontrun{

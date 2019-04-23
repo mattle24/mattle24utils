@@ -4,11 +4,9 @@
 \alias{theme_mattle24}
 \title{Mattle24 Theme}
 \usage{
-theme_mattle24(...)
-}
-\arguments{
-\item{...}{Passes on additional arguments to theme()}
+theme_mattle24()
 }
 \description{
-This is a custom ggplot2 theme developed by @mattle24.
+This is a custom ggplot2 theme based on \code{\link{ggplot2::theme_bw()}}
+developed by @mattle24.
 }

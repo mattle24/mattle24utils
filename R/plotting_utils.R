@@ -2,45 +2,23 @@
 
 #' Mattle24 Theme
 #'
-#' This is a custom ggplot2 theme developed by @mattle24.
+#' This is a custom ggplot2 theme based on \code{\link{ggplot2::theme_bw()}}
+#' developed by @mattle24.
 #'
-#' @param ... Passes on additional arguments to theme()
 #' @export
-theme_mattle24 <- function (...) {
-  requireNamespace('ggplot2', quietly = FALSE)
-  tryCatch(extrafont::loadfonts(quiet = TRUE))
+theme_mattle24 <- function () {
 
-  theme_bw() +
-  theme(
+  ggplot2::theme_bw() +
+  ggplot2::theme(
     panel.background = element_rect(fill = 'white')
     ,panel.border = element_rect(color = 'gray70', fill = NA)
     ,panel.grid.major = element_line(color = 'gray80')
     ,panel.grid.minor = element_blank()
-    ,text = element_text(family = 'Dubai')
     ,plot.title = element_text(hjust = 0.5, size = 18)
     ,plot.subtitle = element_text(hjust = 0.5, size = 12, colour = 'gray54')
-    ,axis.title = element_text(size = 14)
-    ,axis.text = element_text(size = 10)
     ,axis.ticks = element_blank()
     ,legend.position = 'bottom'
-    ,...
   )
-}
-
-# The `quick_colors` list is an internal list to store colors for `quick_color()`
-quick_colors <- list(
-  light_blue = '#00C5Cd'
-)
-
-#' Quick Colors
-#'
-#' This is a way for me to store color hex codes I frequently use for easy recall.
-#'
-#' @param color A character with the color(s) to return a hex code for.
-#'
-#' @export
-quick_color <- function(color) {
-  return(quick_colors[[color]])
 }
 
 #' Reorder Within Clean Labeller
