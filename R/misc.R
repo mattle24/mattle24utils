@@ -27,7 +27,7 @@ drop_na_verbose <- function(.data, ...) {
   .data <- tidyr::drop_na(.data, ...)
 
   end_nrow <- nrow(.data)
-  warning("Droped", starting_nrow - end_nrow, " rows.", call. = FALSE)
+  warning("Droped ", starting_nrow - end_nrow, " rows.\n", call. = FALSE)
 
   .data
 }
@@ -58,7 +58,7 @@ filter_verbose <- function(.data, ...) {
   .data <- dplyr::filter(.data, ...)
 
   end_nrow <- nrow(.data)
-  warning("Droped", starting_nrow - end_nrow, " rows.", call. = FALSE)
+  warning("Droped ", starting_nrow - end_nrow, " rows.\n", call. = FALSE)
 
   .data
 }
