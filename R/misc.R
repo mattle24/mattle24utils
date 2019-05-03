@@ -1,3 +1,14 @@
+#' Warn row difference
+#'
+#' Helper function to warn the differences in rows. Requires a variable
+#' `starting_rows` to be in the scope.
+#' @param .data A data frame or similar object.
+warn_row_difference <- function(.data) {
+  warning("\nDropped ", starting_nrow - nrow(.data), " rows.\n",
+          call. = FALSE)
+}
+
+
 #' Drop NA verbose
 #'
 #' A wraper of \code{\link{tidyr::drop_na()}} to drop NA values and give a
@@ -20,16 +31,16 @@
 #' drop_na_verbose(data, -x2) # filter when any column, not including x2, is NA
 #' }
 #'
+#' @importFrom magrittr %T>%
 #' @export
 drop_na_verbose <- function(.data, ...) {
+  if (!requireNamespace("tidyr", quietly = TRUE)) {
+    stop("Package \"tidyr\" needed.", call. = FALSE)
+  }
+
   starting_nrow <- nrow(.data)
-
-  .data <- tidyr::drop_na(.data, ...)
-
-  end_nrow <- nrow(.data)
-  warning("Droped ", starting_nrow - end_nrow, " rows.\n", call. = FALSE)
-
-  .data
+  tidyr::drop_na(.data, ...) %T>%
+    warn_row_difference
 }
 
 
@@ -53,12 +64,11 @@ drop_na_verbose <- function(.data, ...) {
 #'
 #' @export
 filter_verbose <- function(.data, ...) {
+  if (!requireNamespace("dplyr", quietly = TRUE)) {
+    stop("Package \"dplyr\" needed.", call. = FALSE)
+  }
+
   starting_nrow <- nrow(.data)
-
-  .data <- dplyr::filter(.data, ...)
-
-  end_nrow <- nrow(.data)
-  warning("Droped ", starting_nrow - end_nrow, " rows.\n", call. = FALSE)
-
-  .data
+  dplyr::filter(.data, ...) %T>%
+    warn_row_difference
 }

@@ -58,7 +58,11 @@ rmarkdown_template_main <- function(title = "", author = "") {
       toc: true
       toc_depth: 3
       toc_float: true
+      df_print: kable
   ---
+
+  # Purpose
+
 
   # Packages and Setup
 
